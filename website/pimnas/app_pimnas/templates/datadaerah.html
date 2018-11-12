@@ -7,8 +7,645 @@
 {% endblock %}
 
 {% block content %}
+<style>
+    .headList{
+        list-style-type: none;
+        font-size: 20px;
+    }
+
+    .isiList{
+        list-style-type: none;
+    }
+</style>
 <div class="container" style="border: 1px solid black">
     <div id="geochart" style="width: 100%;"></div>
+</div>
+<div class="accordion" id="accordionExample">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Jakarta Pusat
+            </button>
+        </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Gambir</li>
+                        <br>
+                        <li class="isiList">Gambir</li>
+                        <li class="isiList">Kebon Kelapa</li>
+                        <li class="isiList">Petojo Selatan</li>
+                        <li class="isiList">Duri Pulo</li>
+                        <li class="isiList">Cideng</li>
+                        <li class="isiList">Petojo Utara</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Tanah Abang</li>
+                        <br>
+                        <li class="isiList">Bendungan Hilir</li>
+                        <li class="isiList">Karet Tengsin</li>
+                        <li class="isiList">Kebon Melati</li>
+                        <li class="isiList">Kebon Kacang</li>
+                        <li class="isiList">Kampung Bali</li>
+                        <li class="isiList">Pertamburan</li>
+                        <li class="isiList">Gelora</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Menteng</li>
+                        <br>
+                        <li class="isiList">Menteng</li>
+                        <li class="isiList">Kwitang</li>
+                        <li class="isiList">Kenari</li>
+                        <li class="isiList">Paseban</li>
+                        <li class="isiList">Kramat</li>
+                        <li class="isiList">Bungur</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Senen</li>
+                        <br>
+                        <li class="isiList">Senen</li>
+                        <li class="isiList">Kwitang</li>
+                        <li class="isiList">Kenari</li>
+                        <li class="isiList">Paseban</li>
+                        <li class="isiList">Kramat</li>
+                        <li class="isiList">Bungur</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Cempaka Putih</li>
+                        <br>
+                        <li class="isiList">Cempaka Putih Timur</li>
+                        <li class="isiList">Cempaka Putih Barat</li>
+                        <li class="isiList">Rawasari</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Johar Baru</li>
+                        <br>
+                        <li class="isiList">Galur</li>
+                        <li class="isiList">Tanah Tinggi</li>
+                        <li class="isiList">Kampung Rawa</li>
+                        <li class="isiList">Johar Baru</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Kemayoran</li>
+                        <br>
+                        <li class="isiList">Gunung Sahari Selatan</li>
+                        <li class="isiList">Kemayoran</li>
+                        <li class="isiList">Kebon Kosong</li>
+                        <li class="isiList">Harapan Mulya</li>
+                        <li class="isiList">Cempaka Baru</li>
+                        <li class="isiList">Utan Panjang</li>
+                        <li class="isiList">Sumur Batu</li>
+                        <li class="isiList">Serdang</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Sawah Besar</li>
+                        <br>
+                        <li class="isiList">Pasar Baru</li>
+                        <li class="isiList">Gunung Sahari Utama</li>
+                        <li class="isiList">Mangga Dua Selatan</li>
+                        <li class="isiList">Karang Anyar</li>
+                        <li class="isiList">Kartini</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Jakarta utara
+            </button>
+        </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Koja</li>
+                        <br>
+                        <li class="isiList">Koja Utara</li>
+                        <li class="isiList">Koja Selatan</li>
+                        <li class="isiList">Rawa Badak Utara</li>
+                        <li class="isiList">Rawa Badak Selatan</li>
+                        <li class="isiList">Tugu Utara</li>
+                        <li class="isiList">Tugu Selatan</li>
+                        <li class="isiList">Lagoa</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Kelapa Gading</li>
+                        <br>
+                        <li class="isiList">Kelapa Gading Barat</li>
+                        <li class="isiList">Kelapa Gading Timur</li>
+                        <li class="isiList">Pegangsaan Dua</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Tanjung Priok</li>
+                        <br>
+                        <li class="isiList">Tanjung Priok</li>
+                        <li class="isiList">Kebon Bawang</li>
+                        <li class="isiList">Sungai Bambu</li>
+                        <li class="isiList">Papanggo</li>
+                        <li class="isiList">Warakas</li>
+                        <li class="isiList">Sunter Agung</li>
+                        <li class="isiList">Sunter Jaya</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Pademangan</li>
+                        <br>
+                        <li class="isiList">Pademangan Timur</li>
+                        <li class="isiList">Pademangan Barat</li>
+                        <li class="isiList">Ancol</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Penjaringan</li>
+                        <br>
+                        <li class="isiList">Penjaringan</li>
+                        <li class="isiList">Pluit</li>
+                        <li class="isiList">Pejagalan</li>
+                        <li class="isiList">Kapuk Muara</li>
+                        <li class="isiList">Kamal Muara</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Cilincing</li>
+                        <br>
+                        <li class="isiList">Kali Baru</li>
+                        <li class="isiList">Cilincing</li>
+                        <li class="isiList">Semper Barat</li>
+                        <li class="isiList">Semper Timur</li>
+                        <li class="isiList">Sukapura</li>
+                        <li class="isiList">Rorotan</li>
+                        <li class="isiList">Marunda</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingThree">
+        <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Jakarta Timur
+            </button>
+        </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Matraman</li>
+                        <br>
+                        <li class="isiList">Pisangan Baru</li>
+                        <li class="isiList">Utan Kayu Selatan</li>
+                        <li class="isiList">Utan Kayu Utara</li>
+                        <li class="isiList">Kayu Manis</li>
+                        <li class="isiList">Pal Meriam</li>
+                        <li class="isiList">Kebon Manggis</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Pulo Gadung</li>
+                        <br>
+                        <li class="isiList">Kayu Putih</li>
+                        <li class="isiList">Jati</li>
+                        <li class="isiList">Rawamangun</li>
+                        <li class="isiList">Pisangan Timur</li>
+                        <li class="isiList">Cipinang</li>
+                        <li class="isiList">Jatinegara Kaum</li>
+                        <li class="isiList">Pulo Gadung</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Jatinegara</li>
+                        <br>
+                        <li class="isiList">Bali Mester</li>
+                        <li class="isiList">Kampung Melayu</li>
+                        <li class="isiList">Bidaracina</li>
+                        <li class="isiList">CipinangCempedak</li>
+                        <li class="isiList">Rawa Bunga</li>
+                        <li class="isiList">Cipinang Besar Utara</li>
+                        <li class="isiList">Cipinang Besar Selatan</li>
+                        <li class="isiList">Cipinang Muara</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Duren Sawit</li>
+                        <br>
+                        <li class="isiList">Pondok Bambu</li>
+                        <li class="isiList">Duren Sawit</li>
+                        <li class="isiList">Pondok Kelapa</li>
+                        <li class="isiList">Pondok Kopi</li>
+                        <li class="isiList">Malaka Jaya</li>
+                        <li class="isiList">Malaka Sari</li>
+                        <li class="isiList">Klender</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Kramat Jati</li>
+                        <br>
+                        <li class="isiList">Kramat Jati</li>
+                        <li class="isiList">Batu Ampar</li>
+                        <li class="isiList">Balekambang</li>
+                        <li class="isiList">Kampung Tengah</li>
+                        <li class="isiList">Dukuh</li>
+                        <li class="isiList">Cawang</li>
+                        <li class="isiList">Cililitan</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Makasar</li>
+                        <br>
+                        <li class="isiList">Pinang Ranti</li>
+                        <li class="isiList">Makasar</li>
+                        <li class="isiList">Halim Perdanakusuma</li>
+                        <li class="isiList">Cipinang Melayu</li>
+                        <li class="isiList">Kebon Pala</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Pasar Rebo</li>
+                        <br>
+                        <li class="isiList">Pekayon</li>
+                        <li class="isiList">Kampung Gedong</li>
+                        <li class="isiList">Cijantung</li>
+                        <li class="isiList">Kampung Baru</li>
+                        <li class="isiList">Kalisari</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Ciracas</li>
+                        <br>
+                        <li class="isiList">Cibubur</li>
+                        <li class="isiList">Kelapa Dua Wetan</li>
+                        <li class="isiList">Ciracas</li>
+                        <li class="isiList">Susukan</li>
+                        <li class="isiList">Rambutan</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Cipayung</li>
+                        <br>
+                        <li class="isiList">Lubang Buaya</li>
+                        <li class="isiList">Ceger</li>
+                        <li class="isiList">Cipayung</li>
+                        <li class="isiList">Munjul</li>
+                        <li class="isiList">Pondok Ranggon</li>
+                        <li class="isiList">Cilangkap</li>
+                        <li class="isiList">Setu</li>
+                        <li class="isiList">Bambu Apus</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Cakung</li>
+                        <br>
+                        <li class="isiList">Cakung</li>
+                        <li class="isiList">Cakung Timur</li>
+                        <li class="isiList">Rawa Terate</li>
+                        <li class="isiList">Jatinegara</li>
+                        <li class="isiList">Penggilingan</li>
+                        <li class="isiList">Pulogebang</li>
+                        <li class="isiList">Ujung Menteng</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingFour">
+        <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            Jakarta Selatan
+            </button>
+        </h5>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Kebayoran Baru</li>
+                        <br>
+                        <li class="isiList">Selong</li>
+                        <li class="isiList">Gunung</li>
+                        <li class="isiList">Kramat Pela</li>
+                        <li class="isiList">Gandaria Utara</li>
+                        <li class="isiList">Cipete Utara</li>
+                        <li class="isiList">Pulo</li>
+                        <li class="isiList">Melawai</li>
+                        <li class="isiList">Petogogan</li>
+                        <li class="isiList">Rawa Barat</li>
+                        <li class="isiList">Senayan</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Kebayoran Lama</li>
+                        <br>
+                        <li class="isiList">Grogol Utara</li>
+                        <li class="isiList">Grogol Selatan</li>
+                        <li class="isiList">Cipulir</li>
+                        <li class="isiList">Kebayoran Lama Utara</li>
+                        <li class="isiList">Kebayoran Lama Selatan</li>
+                        <li class="isiList">Pondok Pinang</li>
+                        <li class="isiList">Pondok Indah</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Pesanggrahan</li>
+                        <br>
+                        <li class="isiList">Ulujami</li>
+                        <li class="isiList">Petukangan Utara</li>
+                        <li class="isiList">Petukangan Selatan</li>
+                        <li class="isiList">Pesanggrahan</li>
+                        <li class="isiList">Bintaro</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Cilandak</li>
+                        <br>
+                        <li class="isiList">Cipete Selatan</li>
+                        <li class="isiList">Gandaria Selatan</li>
+                        <li class="isiList">Cilandak Barat</li>
+                        <li class="isiList">Lebak Bulus</li>
+                        <li class="isiList">Pondok Labu</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Pasar Minggu</li>
+                        <br>
+                        <li class="isiList">Pejaten Barat</li>
+                        <li class="isiList">Pejaten Timur</li>
+                        <li class="isiList">Pasar Minggu</li>
+                        <li class="isiList">Kebagusan</li>
+                        <li class="isiList">Jati Padang</li>
+                        <li class="isiList">Ragunan</li>
+                        <li class="isiList">Cilandak Timur</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Jagakarsa</li>
+                        <br>
+                        <li class="isiList">Tanjung Barat</li>
+                        <li class="isiList">Lenteng Agung</li>
+                        <li class="isiList">Jagakarsa</li>
+                        <li class="isiList">Ciganjur</li>
+                        <li class="isiList">Srengseng Sawah</li>
+                        <li class="isiList">Cipedak</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Mampang Prapatan</li>
+                        <br>
+                        <li class="isiList">Kuningan Barat</li>
+                        <li class="isiList">Pela Mampang</li>
+                        <li class="isiList">Bangka</li>
+                        <li class="isiList">Tegal Parang</li>
+                        <li class="isiList">Mampang Prapatan</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Pancoran</li>
+                        <br>
+                        <li class="isiList">Kalibata</li>
+                        <li class="isiList">Rawa Jati</li>
+                        <li class="isiList">Duren Tiga</li>
+                        <li class="isiList">Cikoko</li>
+                        <li class="isiList">Pengadegan</li>
+                        <li class="isiList">Pancoran</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Tebet</li>
+                        <br>
+                        <li class="isiList">Tebet Barat</li>
+                        <li class="isiList">Tebet Timur</li>
+                        <li class="isiList">Kebon Baru</li>
+                        <li class="isiList">Bukit Duri</li>
+                        <li class="isiList">Manggarai</li>
+                        <li class="isiList">Manggarai Selatan</li>
+                        <li class="isiList">Menteng Dalam</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Setiabudi</li>
+                        <br>
+                        <li class="isiList">Setiabudi</li>
+                        <li class="isiList">Karet</li>
+                        <li class="isiList">Karet Semanggi</li>
+                        <li class="isiList">Karet Kuningan</li>
+                        <li class="isiList">Kuningan Timur</li>
+                        <li class="isiList">Menteng Atas</li>
+                        <li class="isiList">Pasar Manggis</li>
+                        <li class="isiList">Guntur</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingFile">
+        <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            Jakarta Barat
+            </button>
+        </h5>
+        </div>
+        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Cengkareng</li>
+                        <br>
+                        <li class="isiList">Kedaung Kali Angke</li>
+                        <li class="isiList">Kapuk</li>
+                        <li class="isiList">Cengkareng Barat</li>
+                        <li class="isiList">Cengkareng Timur</li>
+                        <li class="isiList">Rawa Buaya</li>
+                        <li class="isiList">Duri Kosambi</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Grogol Petamburan</li>
+                        <br>
+                        <li class="isiList">Tomang</li>
+                        <li class="isiList">Grogol</li>
+                        <li class="isiList">Jelambar</li>
+                        <li class="isiList">Jelambar Baru</li>
+                        <li class="isiList">Wijaya Kusuma</li>
+                        <li class="isiList">Tanjung Duren Utama</li>
+                        <li class="isiList">Tanjung Duren Selatan</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Kalideres</li>
+                        <br>
+                        <li class="isiList">Kamal</li>
+                        <li class="isiList">Tegal Alur</li>
+                        <li class="isiList">Pegadungan</li>
+                        <li class="isiList">Kalideres</li>
+                        <li class="isiList">Semanan</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Kebon Jeruk</li>
+                        <br>
+                        <li class="isiList">Duri Kepa</li>
+                        <li class="isiList">Kedoya Selatan</li>
+                        <li class="isiList">Kedoya Utara</li>
+                        <li class="isiList">Kebon Jeruk</li>
+                        <li class="isiList">Sukabumi Utara</li>
+                        <li class="isiList">Kelapa Dua</li>
+                        <li class="isiList">Sukabumi Selatan</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Kembangan</li>
+                        <br>
+                        <li class="isiList">Kembangan Selatan</li>
+                        <li class="isiList">Kembangan Utara</li>
+                        <li class="isiList">Meruya Utara</li>
+                        <li class="isiList">Srengseng</li>
+                        <li class="isiList">Joglo</li>
+                        <li class="isiList">Meruya Selatan</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Palmerah</li>
+                        <br>
+                        <li class="isiList">Slipi</li>
+                        <li class="isiList">Kota Bambu Utara</li>
+                        <li class="isiList">Jati Pulo</li>
+                        <li class="isiList">Palmerah</li>
+                        <li class="isiList">Kemanggisan</li>
+                        <li class="isiList">Kota Bambu Selatan</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Taman Sari</li>
+                        <br>
+                        <li class="isiList">Pinangsia</li>
+                        <li class="isiList">Glodok</li>
+                        <li class="isiList">Keagungan</li>
+                        <li class="isiList">Krukut</li>
+                        <li class="isiList">Taman Sari</li>
+                        <li class="isiList">Maphar</li>
+                        <li class="isiList">Tangki</li>
+                        <li class="isiList">Mangga Besar</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Tambora</li>
+                        <br>
+                        <li class="isiList">Tanah Sereal</li>
+                        <li class="isiList">Tambora</li>
+                        <li class="isiList">Roa Malaka</li>
+                        <li class="isiList">Pekojan</li>
+                        <li class="isiList">Jembatan Lima</li>
+                        <li class="isiList">Krendang</li>
+                        <li class="isiList">Duri Utara</li>
+                        <li class="isiList">Duri Selatan</li>
+                        <li class="isiList">Kalianyar</li>
+                        <li class="isiList">Jembatan Besi</li>
+                        <li class="isiList">Angke</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingFile">
+        <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            Kepulauan Seribu
+            </button>
+        </h5>
+        </div>
+        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Kepulauan Seribu Utara</li>
+                        <br>
+                        <li class="isiList">Pulau Kelapa</li>
+                        <li class="isiList">Pulau Harapan</li>
+                        <li class="isiList">Pulau Panggang</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <ul>
+                        <li class="headList">Kepulauan Seribu Selatan</li>
+                        <br>
+                        <li class="isiList">Pulau Tidung</li>
+                        <li class="isiList">Pulau Pari</li>
+                        <li class="isiList">Pulau Untung Jawa</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}

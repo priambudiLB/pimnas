@@ -8,7 +8,7 @@ def index(request):
 	return render(request, 'index.html', response)
 
 def signin(request):
-	return render(request, 'index.html', response)
+	return render(request, 'signin.html', response)
 
 def data_daerah(request):
 	return render(request, 'datadaerah.html', response)

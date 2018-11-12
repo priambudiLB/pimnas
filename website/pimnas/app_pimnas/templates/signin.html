@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block subtitle %}
+    Home
+{% endblock %}
+
+{% block content %}
+<style>
+#container { 
+    width: 500px;
+    height: 500px;
+    margin-left: -250px; /* Half of width */
+    margin-top: -250px; /* Half of height */
+    position: absolute; left: 50%; top: 50%;
+}
+</style>
+<form id="container">
+    <h3>Login Serdadu</h3>
+    <br>
+    <div class="form-group">
+      <label for="inputUsername">Username</label>
+      <input type="text" class="form-control" id="inputUsername" aria-describedby="usernameHelp" placeholder="Enter username">
+    </div>
+    <div class="form-group">
+      <label for="inputPassword">Password</label>
+      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-dark">Log In</button>
+</form>
+
+
+{% endblock %}

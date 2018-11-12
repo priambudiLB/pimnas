@@ -19,27 +19,64 @@
 
       function drawRegionsMap() {
 
-        var data = google.visualization.arrayToDataTable([
-          ['Provinsi', 'Value'],
-          ['ID-JK', 102],
-        ]);
+var data = google.visualization.arrayToDataTable([
+  ['Provinsi', 'Jumlah Pengmas'],
+  ['Banten', 1],
+  ['Sumatera Utara', 2],
+  ['Aceh', 3,],
+  ['Riau', 4,],
+  ['Sumatera Barat', 1],
+  ['Jambi', 2],
+  ['Bengkulu', 3],
+  ['Sumatera Selatan', 4],
+  ['Lampung', 1],
+  ['ID-JK', 4],
+  ['Jawa Barat', 2],
+  ['Jawa Tengah', 3],
+  ['Yogyakarta', 1],
+  ['Jawa Timur', 2],
+  ['Bali', 3],
+  ['Nusa Tenggara Barat', 4],
+  ['Nusa Tenggara Timur', 1],
+  ['Bangka Belitung', 2],
+  ['Kalimantan Barat', 3],
+  ['Kalimantan Tengah', 4],
+  ['Kalimantan Selatan', 1],
+  ['Kalimantan Timur', 2],
+  ['Kalimantan Utara', 3],
+  ['Sulawesi Selatan', 4],
+  ['Sulawesi Tenggara', 1],
+  ['Sulawesi Barat', 2],
+  ['Sulawesi Tengah', 3],
+  ['Sulawesi Utara', 4],
+  ['Gorontalo', 1],
+  ['ID-MA', 2],                // Harus ID-MA, ID-PB     => Kalo mau muncul maluku,
+                                         //                           harus diformat semuanya.
+  ['ID-PB', 3],                   //                           https://developers.google.com/chart/interactive/docs/reference#patternformatter
+  ['Papua', 4],
+  ['Maluku Utara', 1],
+]);
 
-        var options = {
-          region: 'ID',
-          displayMode: 'regions',
-          resolution: 'provinces',
-        //   projection: {
-        //       name: 'albers',
-        //       parallels: [10,10]
-        //   },
-          backgroundColor: {fill:'#FFFFFF'},
-          keepAspectRatio: false,
-        };
+var options = {
+  region: 'ID',
+  displayMode: 'regions',        
+  resolution: 'provinces',
+  colorAxis: {
+    colors: ['#000011', '000088', '0000aa', '0000ff'],
+    values: [1, 2, 3, 4]
+  },
+//   projection: {
+//       name: 'albers',
+//       parallels: [10,10]
+//   },
+  backgroundColor: {fill:'#FFFFFF'},
+  keepAspectRatio: false,
+};
 
-        var chart = new google.visualization.GeoChart(document.getElementById('geochart'));
+var chart = new google.visualization.GeoChart(document.getElementById('geochart'));
 
-        chart.draw(data, options);
-      }
+chart.draw(data, options);
+}
     </script>
     <style>
         
